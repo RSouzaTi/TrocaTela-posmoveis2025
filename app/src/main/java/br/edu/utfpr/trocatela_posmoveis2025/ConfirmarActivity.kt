@@ -1,6 +1,9 @@
 package br.edu.utfpr.trocatela_posmoveis2025
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -37,4 +40,16 @@ class ConfirmarActivity : AppCompatActivity() {
         tvValor.text = valor
 
     } //fim do onCreate
+
+    fun btConfirmarComSMSOnClick(view: View) {
+        val sms = "Cod: ${tvCod.text} Qtd:${tvQtd.text} Valor:${tvValor.text}"
+
+        val intent = Intent(Intent.ACTION_VIEW)
+
+        intent.setData(Uri.parse("sms:+554699121234"))
+        intent.putExtra("sms_body", "sms")
+
+        startActivity(intent)
+
+    }
 }

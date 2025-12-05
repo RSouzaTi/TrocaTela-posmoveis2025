@@ -32,12 +32,14 @@ class LancamentoActivity : AppCompatActivity() {
     fun btConfirmarOnClick(view: View) {
         val intent = Intent(this, ConfirmarActivity::class.java)
 
-        //o campo código será transferido como inteiro para mostrar como fazr a recuperação de um numérico na tela de confirmar
+        //o campo código será transferido como inteiro para mostrar como fazer a recuperação de um numérico na tela de confirmar
         intent.putExtra("cod", etCod.text.toString().toInt())
         intent.putExtra("qtd", etQtd.text.toString())
         intent.putExtra("valor", etValor.text.toString())
 
         startActivity(intent)
     }
-    fun btListarOnClick(view: View) {}
+    fun btListarOnClick(view: View) {
+
+    }
 }
