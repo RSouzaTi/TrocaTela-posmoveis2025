@@ -47,7 +47,7 @@ class ConfirmarActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_VIEW)
 
         intent.setData(Uri.parse("sms:+554699121234"))
-        intent.putExtra("sms_body", "sms")
+        intent.putExtra("sms_body", sms)
 
         startActivity(intent)
 
